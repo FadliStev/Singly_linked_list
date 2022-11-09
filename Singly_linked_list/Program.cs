@@ -15,13 +15,21 @@ namespace Singly_linked_list
             public node next;
         }
 
-        class list
+        class List
         {
             node START;
 
-            public list()
+            public List()
             {
                 START = null;
+            }
+
+            public void addNode()/*Method menambah sebuah node kedalam list*/
+            {
+                int nim;
+                string nm;
+                Console.Write("\nMasukkan nomer Mahasiswa: ");
+                nim = Convert.ToInt32(Console.ReadLine());
             }
         }
         
