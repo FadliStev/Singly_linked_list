@@ -35,6 +35,18 @@ namespace Singly_linked_list
                 node nodeBaru = new node();  
                 nodeBaru.noMhs = nim;
                 nodeBaru.nama = nm;
+
+                if (START == null || nim <= START.noMhs)/*Node ditambahkan sebagai node pertama*/
+                {
+                    if((START != null)&&(nim == START.noMhs))
+                    {
+                        Console.WriteLine("\nNomer mahasiswa sama tidak diijinkan");
+                        return;
+                    }
+                    nodeBaru.next = START;
+                    START = nodeBaru;
+                    return;
+                }/*Menemukan lokasi node baru didalam list*/
             }
         }
         
