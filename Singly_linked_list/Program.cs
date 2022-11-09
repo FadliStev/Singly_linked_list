@@ -92,7 +92,14 @@ namespace Singly_linked_list
                     previous = current;
                     current = current.next;
                 }
+
+                if (current == null)
+                    return (false); 
+                else
+                    return (true);
             }
+
+            
         }
         
         static void Main(string[] args)
