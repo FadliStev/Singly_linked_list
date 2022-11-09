@@ -40,13 +40,22 @@ namespace Singly_linked_list
                 {
                     if((START != null)&&(nim == START.noMhs))
                     {
-                        Console.WriteLine("\nNomer mahasiswa sama tidak diijinkan");
+                        Console.WriteLine("\nNomer mahasiswa sama tidak diijinkan\n");
                         return;
                     }
                     nodeBaru.next = START;
                     START = nodeBaru;
                     return;
                 }/*Menemukan lokasi node baru didalam list*/
+
+                node previous, current;
+                previous = START;
+                current = START;
+
+                while((current != null)&&(nim >= current.noMhs))
+                {
+                    if (nim == current)
+                }
             }
         }
         
