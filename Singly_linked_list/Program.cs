@@ -109,11 +109,18 @@ namespace Singly_linked_list
                     Console.WriteLine("\nData di dalam list adalah : \n");
                     node currentNode;
                     for (currentNode = START; currentNode != null; currentNode = currentNode.next)
-                        Console.Write(currentNode.noMhs + "" + currentNode.nama + "\n");
+                        Console.Write(currentNode.noMhs + " " + currentNode.nama + "\n");
                     Console.WriteLine();
                 }
             }
             
+            public bool listEmpty()
+            {
+                if (START == null)
+                    return true;
+                else
+                    return false;
+            }
         }
         
         static void Main(string[] args)
