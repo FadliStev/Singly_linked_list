@@ -62,6 +62,36 @@ namespace Singly_linked_list
                     previous = current;
                     current = current.next;
                 }/*Node baru akan ditempatkan diantara previous dan current*/
+
+                nodeBaru.next = current;
+                previous.next = nodeBaru;
+            }
+            /*Method untuk menghapus node tertentu di dalam list*/
+            public bool delNode(int nim)
+            {
+                node previous, current;
+                previous = current = null;
+                /*check apakah node yang dimasukkan ada di dalam list atau tidak*/
+                if(Search(nim, ref previous, ref current)== false)
+                    return false;
+                previous.next = current.next;
+                if (current == START)
+                    START = START.next;
+                return true;
+            }
+
+            /*Method untuk menge-check apakah node yang dimasukkan ada di dalam list*/
+
+            public bool Search(int nim, ref node previous, ref node current)
+            {
+                previous = START;
+                current = START;
+
+                while((current != null)&&(nim != current.noMhs))
+                {
+                    previous = current;
+                    current = current.next;
+                }
             }
         }
         
