@@ -30,6 +30,11 @@ namespace Singly_linked_list
                 string nm;
                 Console.Write("\nMasukkan nomer Mahasiswa: ");
                 nim = Convert.ToInt32(Console.ReadLine());
+                Console.Write("\nMasukkan nama Mahasiswa: ");
+                nm = Console.ReadLine();
+                node nodeBaru = new node();  
+                nodeBaru.noMhs = nim;
+                nodeBaru.nama = nm;
             }
         }
         
